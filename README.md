@@ -3,10 +3,11 @@ Send eban and eunban notifications to discord
 
 ## Dependencies
 - [Entwatch CSGO DZ](https://github.com/darkerz7/CSGO-Plugins/tree/master/EntWatch_DZ)
-- [My fork of Sourcemod-Discord](https://github.com/notkoen/sourcemod-discord) *(Note: Plugin is coded using modified `discord.inc`/`discord-api.smx` so you must use my fork)
+- [My fork of Sourcemod-Discord](https://github.com/notkoen/sourcemod-discord) *(Note: Plugin is coded using modified `discord.inc`/`discord-api.smx` so you must use my fork)*
 
 ## Installation
 - Put `entwatch_discord_relay` in your plugins folder
+- Run the plugin so it generates the config file
 - Edit `plugin.entwatch_discord_relay.cfg` in your `cfg/sourcemod/` folder and put in your discord webhook link
 
 ## Modifications
