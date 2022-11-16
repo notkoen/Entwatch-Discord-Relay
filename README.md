@@ -5,6 +5,7 @@ Send eban and eunban notifications to discord.
 ## Features
 
 - Send eban and eunban notifications to Discord
+- Does not require an external discord API plugin to run
 - Includes names, IDs, and steam profile links to both admins and the target
 - Calculates when issued restrictions will end as a Unix timestamp
 
