@@ -1,14 +1,24 @@
 # Entwatch Discord Relay
-Send eban and eunban notifications to discord
+
+Send eban and eunban notifications to discord.
+
+## Features
+
+- Send eban and eunban notifications to Discord
+- Includes names, IDs, and steam profile links to both admins and the target
+- Calculates when issued restrictions will end as a Unix timestamp
 
 ## Dependencies
+
 - [Entwatch CSGO DZ](https://github.com/darkerz7/CSGO-Plugins/tree/master/EntWatch_DZ)
-- [My fork of Sourcemod-Discord](https://github.com/notkoen/sourcemod-discord) *(Note: Plugin is coded using modified `discord.inc`/`discord-api.smx` so you must use my fork)*
+- Sarrus' [DiscordWebhookAPI](https://github.com/Sarrus1/DiscordWebhookAPI)
 
 ## Installation
-- Put `entwatch_discord_relay` in your plugins folder
-- Run the plugin so it generates the config file
+
+- Compile `entwatch_discord_relay.sp` and place it in your plugins folder
+- Run the plugin once so it generates the config file
 - Edit `plugin.entwatch_discord_relay.cfg` in your `cfg/sourcemod/` folder and put in your discord webhook link
 
 ## Modifications
-Because this plugin is coded to work with my modified version of [Sourcemod-Discord](https://github.com/notkoen/sourcemod-discord), those that want to use the original Sourcemod-Discord plugin should update `Embed.SetColor` to use a string as my modifications uses an integer instead. As for your own entwatch plugin, make sure your version of entwatch has forwards for when you eban and eunban clients, and then update the forwards in the plugins as needed.
+
+If you are using a different Entwatch plugin outside of DarkerZ's plugin, make sure your version of entwatch has the same if not similar forwards for when you eban and eunban clients, and then update the code accordingly.
