@@ -11,8 +11,8 @@ Send eban and eunban notifications to discord.
 
 ## Dependencies
 
-- [Entwatch CSGO DZ](https://github.com/darkerz7/CSGO-Plugins/tree/master/EntWatch_DZ)
-- Sarrus' [DiscordWebhookAPI](https://github.com/Sarrus1/DiscordWebhookAPI)
+- DarkerZ's [Entwatch CSGO](https://github.com/darkerz7/CSGO-Plugins/tree/master/EntWatch_DZ) plugin.
+- Sarrus' [DiscordWebhookAPI](https://github.com/Sarrus1/DiscordWebhookAPI) include
 - [SM-RipEXT](https://github.com/ErikMinekus/sm-ripext) Extension (for DiscordWebhookAPI to work)
 
 ## Installation
