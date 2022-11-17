@@ -39,8 +39,6 @@ public void EntWatch_OnClientBanned(int admin, int duration, int client, const c
     }
     
     Webhook hook = new Webhook("A player has been **ebanned!**");
-    hook.SetUsername("Entwatch Eban Notifier");
-    hook.SetAvatarURL("https://www.pngitem.com/pimgs/m/181-1810416_banned-hammer-png-ban-hammer-transparent-png-png.png");
 
     Embed Embed1 = new Embed();
     Embed1.SetColor(0xff0000);
@@ -66,7 +64,7 @@ public void EntWatch_OnClientBanned(int admin, int duration, int client, const c
     {
         int ctime = GetTime();
         int finaltime = ctime + (duration * 60);
-        Format(buffer, sizeof(buffer), "%d Minute%s \n(to <t:%d:f>)", duration, duration > 1 ? "" : "s", finaltime);
+        Format(buffer, sizeof(buffer), "%d Minute%s \n(to <t:%d:f>)", duration, duration > 1 ? "s" : "", finaltime);
     }
     else
     {
@@ -107,8 +105,6 @@ public void EntWatch_OnClientUnbanned(int admin, int client, const char[] reason
     }
     
     Webhook hook = new Webhook("A player has been **eunbanned!**");
-    hook.SetUsername("Entwatch Eunban Notifier");
-    hook.SetAvatarURL("https://cdn.frankerfacez.com/emoticon/599824/4");
 
     Embed Embed1 = new Embed();
     Embed1.SetColor(0x00ff00);
