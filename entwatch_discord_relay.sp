@@ -13,7 +13,7 @@ public Plugin myinfo =
     name = "Entwatch Discord Relay",
     author = "koen",
     description = "Send entwatch eban/eunban notifications to discord",
-    version = "1.3", // New API & code refactoring
+    version = "1.3.2", // New API & code refactoring
     url = "https://github.com/notkoen"
 };
 
@@ -60,15 +60,22 @@ public void EntWatch_OnClientBanned(int admin, int duration, int client, const c
     Embed1.AddField(field2);
 
     // Duration
-    if (duration != 0)
+    switch (duration)
     {
-        int ctime = GetTime();
-        int finaltime = ctime + (duration * 60);
-        Format(buffer, sizeof(buffer), "%d Minute%s \n(to <t:%d:f>)", duration, duration > 1 ? "s" : "", finaltime);
-    }
-    else
-    {
-        Format(buffer, sizeof(buffer), "Permanent");
+        case -1:
+        {
+            Format(buffer, sizeof(buffer), "Temporary");
+        }
+        case 0:
+        {
+            Format(buffer, sizeof(buffer), "Permanent");
+        }
+        default:
+        {
+            int ctime = GetTime();
+            int finaltime = ctime + (duration * 60);
+            Format(buffer, sizeof(buffer), "%d Minute%s \n(to <t:%d:f>)", duration, duration > 1 ? "s" : "", finaltime);
+        }
     }
     EmbedField field3 = new EmbedField("Duration:", buffer, true);
     Embed1.AddField(field3);
